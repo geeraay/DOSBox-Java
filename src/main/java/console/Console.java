@@ -47,6 +47,7 @@ public class Console {
 				line = input.toString();
 			} catch (IOException e) {
 				// do nothing by intention
+                                //e.printStackTrace();
 			}
 			
 			this.outputter.resetStatistics();
