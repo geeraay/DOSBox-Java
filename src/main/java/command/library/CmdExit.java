@@ -22,11 +22,21 @@ class CmdExit extends Command {
 
 	@Override
 	public boolean checkNumberOfParameters(int numberOfParametersEntered) {
-		return numberOfParametersEntered == 0;
+//		//return numberOfParametersEntered == 0;
+//                	if (numberOfParametersEntered > 0) {
+//			//return this.getParameterAt(0).equals("gugus");
+//                        return numberOfParametersEntered == 0;
+//		} else {
+                      return numberOfParametersEntered == 0 || numberOfParametersEntered == 1;
+//                        }
+                        
 	}
 
 	@Override
 	public boolean checkParameterValues(IOutputter outputter) {
+		if (this.getParameterCount() == 1) {
+			return this.getParameterAt(0).equals("gugus");
+		}
 		return true;
 	}
 
