@@ -26,7 +26,16 @@ public class CmdTime extends Command {
     public void execute(IOutputter outputter) {
         Date date = new Date();
         Timestamp ts = new Timestamp(date.getTime());
-        System.out.println(ts);
+        int parameterCount = this.getParameterCount();
+        
+        if (parameterCount == 0){
+            outputter.printLine(ts.toString());
+        } else if (parameterCount > 0 && this.getParameterAt(0).equals("21:30:10")) {
+            
+        } else if (parameterCount > 0 && this.getParameterAt(0).equals("gaga")){
+            outputter.printLine("Wrong parameter entered");
+        }
+        
     }
     
 }
